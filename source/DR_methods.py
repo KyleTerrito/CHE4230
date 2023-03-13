@@ -1,5 +1,6 @@
 from sklearn.decomposition import PCA
 from sklearn.manifold import TSNE
+from sklearn.cluster import DBSCAN
 class DR():
     def __init__(self):
         pass
@@ -9,5 +10,10 @@ class DR():
         return DPCA.fit_transform(data)
     
     def dtSNE(self, n, data):
-        dtSNE = TSNE(n_components= n, random_state= 1)
+        dtSNE = TSNE(n_components= n)
         return dtSNE.fit_transform(data)
+    
+    def dDBSCAN(self, data):
+        dDBSCAN = DBSCAN()
+        return dDBSCAN.fit(data)
+    
