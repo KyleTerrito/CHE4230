@@ -1,9 +1,9 @@
 import numpy as np
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import accuracy_score
-from source.data_preprocess import DataPreprocessing
+from source.data_preprocess import DataProcessing
 
-class ModelBuilder(DataPreprocessing):
+class ModelBuilder(DataProcessing):
     def __init__(self, *args, **kwargs):
         super(ModelBuilder, self).__init__(*args, **kwargs)
 
